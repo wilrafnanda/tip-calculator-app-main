@@ -1,0 +1,215 @@
+:root{
+--Green-900: hsl(183, 100%, 15%);
+--Grey-500: hsl(186, 14%, 43%);
+--Grey-400: hsl(184, 14%, 56%);
+--Grey-200: hsl(185, 41%, 84%);
+--Grey-50: hsl(189, 47%, 97%);
+--White: hsl(0, 100%, 100%);
+--Green-400: hsl(172, 67%, 45%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family:'Space Mono';
+    src: url(images/SpaceMono-Regular.woff2) format('woff2'),
+         url(images/SpaceMono-Regular.woff) format('woff'),
+         url(images/SpaceMono-Regular.ttf) format('truetype');
+    src: url(images/SpaceMono-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+body{
+    background: var(--Grey-200);
+    font-family: 'SAPCE MONO', monospace;
+}
+label{
+    font-size: 0.8rem;
+    color: var(--Grey-500);
+    font-weight: 900;
+}
+
+.program_container{
+    background-color: var(--White);
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin-top: 30px;
+
+}
+header{
+    width: 100%;
+    text-align: center;
+    margin-top: 35px;
+    font-size: 1.2rem;
+    font-weight:normal ;
+    color: var(--Grey-500);
+    letter-spacing: 6px;
+    font-family: 'Space Mono ', monospace;
+}
+
+.input_div-text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Grey-200);
+    padding: 5px 8px;
+    border-radius: 5px;
+   margin-bottom: 30px;
+   margin-top: 10px;
+
+
+    input{
+        width: 80%;
+        background: transparent;
+        outline: none;
+        border: none;
+        text-align: end;
+        font-family: 'Space Mono', monospace;
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--Green-900);
+        
+    }
+}
+
+.button_div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  
+    button{
+        background-color: var(--Green-900);
+        color: var(--White);
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-weight: 900;
+        cursor: pointer;
+        transition: all 200ms ease;
+    }
+   button,input{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+   }
+   input{
+    background-color: var(--Grey-200);
+    border: none;
+    text-align: end;
+    padding-right: 10px;
+    color: var(--Green-900);
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius:5px ;
+    color: var(--Green-900);
+    
+   }
+   button.active{
+    background: var(--Green-400);
+   }
+
+}
+
+.display_section{
+    background: var(--Green-900);
+    padding: 20px;
+    border-radius: 15px;
+
+    button{
+        width: 100%;
+        padding: 15px;
+        /* margin: 5px 0; */
+        border-radius:5px ;
+        background: var(--Green-400);
+        border: none;
+        font-weight: 600;
+    }
+    button.active{
+        background:rgb(94, 122, 125,0.3);;
+        color: rgb(60, 60, 60);
+    }
+}
+
+.tip_total_div,.tip_amount_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .text{
+        font-size: 0.9rem;
+        color: var(--White);
+        margin-bottom: 5px;
+    }
+    .person{
+        color: var(--Grey-400);
+        font-size: 0.8rem;
+    }
+    span{
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: var(--Green-400);
+    }
+
+}
+
+@media screen and (min-width:700px) {
+    .program_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 65%;
+        max-height: 20%;
+        margin: 0 auto;
+        border-radius: 20px;
+        /* align-items: center; */
+        margin: 50px;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .tips_wrap{
+        flex-grow: 1;
+    }
+    .display_section{
+        display: flex;
+        flex-direction: column;
+    }
+    .tip_amount_div{
+        margin-bottom: 55px;
+    }
+    .tip_amount_div span, .tip_total_div span{
+        font-size: 2.5rem;
+    }
+    .input_div-text{
+        padding:  5px 10px;
+    }
+    .button_div{
+        grid-template-columns: repeat(3,1fr);
+        margin-bottom: 20px;
+    }
+    label{
+        font-size: 1.2rem;
+    }
+    .tip_amount_div .person, .tip_total_div .person{
+        font-size: 1.2rem;
+    }
+    .tip_amount_div .text, .tip_total_div .text{
+        font-size: 1.3rem;
+    }
+    header h4{
+        font-size: 1.8rem;
+    }
+}
