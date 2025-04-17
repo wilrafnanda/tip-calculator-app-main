@@ -29,18 +29,18 @@
           </div>
           <label for="">Select Tip %</label>
           <div class="button_div">
-            <button id="selectBtn" class="selectBtn">5%</button>
-            <button id="selectBtn" class="selectBtn">10%</button>
-            <button id="selectBtn" class="selectBtn">15%</button>
-            <button id="selectBtn" class="selectBtn">25%</button>
-            <button id="selectBtn" class="selectBtn">50%</button>
-            <input type="text" id="custom" placeholder="Custom">
+            <button id="selectBtn" class="selectBtn" value="5">5%</button>
+            <button id="selectBtn" class="selectBtn" value="10">10%</button>
+            <button id="selectBtn" class="selectBtn" value="15">15%</button>
+            <button id="selectBtn" class="selectBtn" value="25">25%</button>
+            <button id="selectBtn" class="selectBtn" value="50">50%</button>
+            <input type="text" id="custom" placeholder="Custom" class="custumIput error_state">
             </div>
           </div>
           <label for="">Number of People</label>
-          <div class="input_div-text bottom">
+          <div class="input_div-text bottom ">
             <img src="images/icon-person.svg" alt="">
-            <input type="number" id="displayText" value="1" >
+            <input type="number" id="people" placeholder="0">
           </div>
         </div>
 
@@ -51,17 +51,17 @@
                 <p class="text">Tip Amount</p>
                 <p class="person">/ person</p>
               </div>
-              <span>$0.00</span>
+              <span id="tip_amount">$0.00</span>
             </div>
             <div class="tip_total_div">
               <div>
                 <p class="text">Total</p>
                 <p class="person">/ person</p>
               </div>
-              <span>$0.00</span>
+              <span id="total_amount">$0.00</span>
             </div>
           </div>
-          <button class="active">RESET</button>
+          <button class="active" id="reset_button">RESET</button>
         </div>
       
       
@@ -74,7 +74,7 @@
 
   Select Tip %
   5%
-  10%
+  10% 
   15%
   25%
   50%
