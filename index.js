@@ -30,7 +30,9 @@ let isclicked = false;
         resetBtn.classList.remove('active'); //add active class to reset button
          // Check if the button is clicked
          tip = Number(btn.value);
+         customInput.value
         isclicked = true;
+        calculateTip()
         console.log(tip);
         
     })
@@ -48,10 +50,18 @@ inputEl.addEventListener('input',()=>{
          if (inputEl.value.length > 5) {
             inputEl.value = inputEl.value.slice(0, 5);
       }
+//managing error state for input element
+      if(inputEl.value < 0){
+         errorInput.classList.add('error_state')
+      }else{
+         errorInput.classList.remove('error_state')
+      }
       resetBtn.classList.remove('active')
             billValue = Number(inputEl.value);
             calculateTip();
    })
+
+
 
 //handling input event for peapleValue
 peopleInput.addEventListener('input',()=>{

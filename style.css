@@ -120,6 +120,7 @@ header{
    }
    button.active{
     background: var(--Green-400);
+    color: var(--Green-900);
    }
 
 }
